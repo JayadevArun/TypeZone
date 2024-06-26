@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import './App.css'
+// import './App.css'
 import { paragraphs } from './paragraphs'
 import Content from './content'
 
@@ -131,39 +131,39 @@ const App = () => {
   }
 
   return (
-    <div className='App'>
-      <h1>Typing Speed Test</h1>
-      <h2>Test Your Typing Skill</h2>
-      <div className='tab'>
-        <div className='timer' onClick={handleTryAgain}>
+    <div className='m-5 flex flex-col justify-center items-center'>
+      <h1 className='font-poppins text-3xl m-5 font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#000000] to-[#7e7e7e]'>TypeZone</h1>
+      <h2 className='font-poppins text-2xl m-5 font-light bg-clip-text text-transparent bg-gradient-to-r from-[#000000] to-[#7e7e7e]'>Unleash Your Typing Wizardry</h2>
+      <div className='flex gap-10 text-lg font-poppins m-5 '>
+        <div className='flex flex-col justify-center items-center bg-black text-white p-5 rounded-full ' onClick={handleTryAgain}>
           {
             time > 0
               ? <>
-                <p>{time}</p>
+                <p className='text-xl'>{time}</p>
                 <small>seconds</small>
               </>
               : <small>Try Again!</small>
           }
         </div>
 
-        <div className='square'>
-          <p>{Math.floor(wpm)}</p>
+        <div className='rounded-2xl flex flex-col justify-center items-center bg-black text-white p-5  '>
+          <p className='text-xl'>{Math.floor(wpm)}</p>
           <small>words/min</small>
         </div>
 
-        <div className='square'>
-          <p>{Math.floor(cpm)}</p>
+        <div className='rounded-2xl flex flex-col justify-center items-center bg-black text-white p-5  '>
+          <p className='text-xl'>{Math.floor(cpm)}</p>
           <small>chars/min</small>
         </div>
 
-        <div className='square'>
-          <p>{mistake}</p>
+        <div className='rounded-2xl flex flex-col justify-center items-center bg-black text-white p-5  '>
+          <p className='text-xl'>{mistake}</p>
           <small>mistakes</small>
         </div>
 
-        <div className='square'>
-          <p>{Math.round(acc)}</p>
-          <small>% accuracy</small>
+        <div className='rounded-2xl flex flex-col justify-center items-center bg-black text-white p-5  '>
+          <p className='text-xl'>{Math.round(acc)}%</p>
+          <small>accuracy</small>
         </div>
       </div>
 
@@ -172,7 +172,7 @@ const App = () => {
 
       <Content paragraph={paragraph} word={word} charIndex={charIndex} />
 
-      <span className='restart' onClick={handleRestart}>&#x27F3;</span>
+      <span className='m-5 rounded-full cursor-pointer pt-2 p-3 text-3xl bg-gray-200 hover:bg-gray-300 transition-all ease-in-out duration-300' onClick={handleRestart}>&#x27F3;</span>
     </div>
   )
 }
