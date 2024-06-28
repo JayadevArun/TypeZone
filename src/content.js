@@ -11,7 +11,7 @@ const content = React.memo(({paragraph,word,charIndex}) => {
               text-[#9a9a9a] mx-[3px]
               ${index === charIndex ? 'text-[#3295db] border-[#3295db] border-b-[2px] ' : ''}
               ${word[index] === char 
-                ? 'text-[#95c590] ' 
+                ? 'text-[#52c546] ' 
                 : index<charIndex ? 'text-[#d55b60] ' : ''
               }
               `}>
