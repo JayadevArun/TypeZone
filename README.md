@@ -1,3 +1,7 @@
+# TypeZone
+
+TypeZone is an innovative typing test platform designed to help users of all skill levels enhance their typing speed and accuracy. Leveraging the robust capabilities of React and the modern styling of TailwindCSS, TypeZone provides a user-friendly and visually appealing experience across all devices.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
